@@ -50,7 +50,7 @@ export function Analysis() {
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {nutrientData.map((entry, index) => (
+                  {nutrientData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
