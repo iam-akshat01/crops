@@ -32,7 +32,7 @@ const COLORS = ["hsl(var(--chart-1))", "hsl(var(--chart-2))", "hsl(var(--chart-3
 
 export function Analysis() {
   return (
-    <div className="container py-12">
+    <div className="container p-12">
       <h1 className="text-3xl font-bold mb-6">Soil Analysis</h1>
       <div className="grid gap-6 md:grid-cols-2">
         <Card className="p-6">

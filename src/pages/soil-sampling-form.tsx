@@ -57,21 +57,21 @@ export function SoilSamplingForm() {
   };
 
   const regions = [
-    "North America - Northeast",
-    "North America - Southeast",
-    "North America - Midwest",
-    "North America - Southwest",
-    "North America - West",
-  ];
+    "India - Northeast",
+    "India - East",
+    "India - Central",
+    "India - South",
+    "India - West",
+];
 
   return (
-    <div className="container py-12">
+    <div className="container py-12 flex justify-around">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-6">Soil Sampling Form</h1>
         
         <form onSubmit={handleSubmit}>
           <Tabs value={currentStep} className="space-y-6">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-4 gap-2">
               <TabsTrigger value="location">Location</TabsTrigger>
               <TabsTrigger value="texture">Texture</TabsTrigger>
               <TabsTrigger value="composition">Composition</TabsTrigger>
@@ -86,7 +86,7 @@ export function SoilSamplingForm() {
                     <Input
                       id="location"
                       name="location"
-                      placeholder="e.g., Field A-1"
+                      placeholder="Street C.A."
                       value={formData.location}
                       onChange={handleInputChange}
                       required
