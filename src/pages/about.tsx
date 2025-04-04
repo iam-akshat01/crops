@@ -4,20 +4,25 @@ import { Leaf, Users, Trophy, Target } from "lucide-react";
 export function About() {
   const team = [
     {
-      name: "Dr. Sarah Johnson",
-      role: "Lead Soil Scientist",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+      name: "Mridul Sharma",
+      role: "ML Expert",
+      image: "./ms2.jpeg",
     },
     {
-      name: "Michael Chen",
-      role: "Agricultural Expert",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+      name: "Akshat Mani Tripathi",
+      role: "Frontend Developer",
+      image: "./akshat2.jpeg",
     },
     {
-      name: "Dr. Emily Rodriguez",
+      name: "Shagun Rana",
       role: "Data Analyst",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
+      image: "./sr.jpg",
     },
+    {
+      name: "Tanishka Khandelwal",
+      role: "UI Designer",
+      image: "./tk.jpeg",
+    }
   ];
 
   const values = [
@@ -55,13 +60,10 @@ export function About() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        <div>
+        <div className="pl-6">
           <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
           <p className="text-muted-foreground mb-4">
-            Founded in 2023, our soil sampling system emerged from a simple idea:
-            make professional soil analysis accessible to every farmer. What started
-            as a small research project has grown into a comprehensive platform
-            used by thousands of agricultural professionals worldwide.
+          This project started as a student initiative aimed at solving real-world agricultural challenges through technology. What began as a learning experience has grown into a fully functional platform that provides precise soil analysis and crop recommendations. Our journey has been fueled by curiosity, research, and a commitment to making an impact in the agricultural sector. 
           </p>
           <p className="text-muted-foreground">
             Today, we continue to innovate and improve our services, combining
@@ -117,13 +119,13 @@ export function About() {
 
       <div>
         <h2 className="text-2xl font-semibold mb-8 text-center">Our Team</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 h-auto">
           {team.map((member) => (
-            <Card key={member.name} className="overflow-hidden">
+            <Card key={member.name} className="overflow-hidden flex flex-col justify-between ">
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-96 p-2 object-cover"
               />
               <div className="p-4 text-center">
                 <h3 className="font-semibold">{member.name}</h3>

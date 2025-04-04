@@ -65,7 +65,7 @@ export function SoilSamplingForm() {
 ];
 
   return (
-    <div className="container py-12 flex justify-around">
+    <div className="container py-12  flex justify-around">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-6">Soil Sampling Form</h1>
         
@@ -86,7 +86,7 @@ export function SoilSamplingForm() {
                     <Input
                       id="location"
                       name="location"
-                      placeholder="Street C.A."
+                      placeholder="Enter the address"
                       value={formData.location}
                       onChange={handleInputChange}
                       required
