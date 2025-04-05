@@ -18,6 +18,10 @@ import {
   TabsList,
   TabsTrigger,
 } from "../components/ui/tabs";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "../components/ui/radio-group";
 import { toast } from "sonner";
 
 export function SoilSamplingForm() {
@@ -57,10 +61,10 @@ export function SoilSamplingForm() {
     "India - Central",
     "India - South",
     "India - West",
-  ];
+];
 
   return (
-    <div className="container py-12 flex justify-around">
+    <div className="container py-12  flex justify-around">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-6">Soil Sampling Form</h1>
         
@@ -118,6 +122,7 @@ export function SoilSamplingForm() {
               </Card>
             </TabsContent>
 
+
             <TabsContent value="composition">
               <Card className="p-6">
                 <div className="space-y-4">
@@ -158,7 +163,7 @@ export function SoilSamplingForm() {
                     <Button
                       type="button"
                       variant="outline"
-                      onClick={() => setCurrentStep("location")}
+                      onClick={() => setCurrentStep("texture")}
                     >
                       Previous
                     </Button>
