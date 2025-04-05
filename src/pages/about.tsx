@@ -72,32 +72,32 @@ export function About() {
           </p>
         </div>
         <Card className="p-6">
-          <h3 className="text-xl font-semibold mb-4">Key Achievements</h3>
-          <ul className="space-y-4">
-            <li className="flex items-start gap-4">
-              <div className="rounded-full bg-primary/10 p-2">
-                <Trophy className="h-4 w-4 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-medium">Agricultural Innovation Award 2024</h4>
-                <p className="text-sm text-muted-foreground">
-                  Recognized for breakthrough soil analysis technology
-                </p>
-              </div>
-            </li>
-            <li className="flex items-start gap-4">
-              <div className="rounded-full bg-primary/10 p-2">
-                <Users className="h-4 w-4 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-medium">10,000+ Farmers Served</h4>
-                <p className="text-sm text-muted-foreground">
-                  Helping farmers across 50+ countries
-                </p>
-              </div>
-            </li>
-          </ul>
-        </Card>
+  <h3 className="text-xl font-semibold mb-4">Key Achievements</h3>
+  <ul className="space-y-4">
+    <li className="flex items-start gap-4">
+      <div className="rounded-full bg-primary/10 p-2">
+        <Trophy className="h-4 w-4 text-primary" />
+      </div>
+      <div>
+        <h4 className="font-medium">A Step Towards Smarter Farming</h4>
+        <p className="text-sm text-muted-foreground">
+          Exploring innovative solutions to make agriculture more efficient and data-driven.
+        </p>
+      </div>
+    </li>
+    <li className="flex items-start gap-4">
+      <div className="rounded-full bg-primary/10 p-2">
+        <Users className="h-4 w-4 text-primary" />
+      </div>
+      <div>
+        <h4 className="font-medium">Built with Passion & Purpose</h4>
+        <p className="text-sm text-muted-foreground">
+          Created by students eager to bring technology into farming for a better future.
+        </p>
+      </div>
+    </li>
+  </ul>
+</Card>
       </div>
 
       <div>

@@ -29,7 +29,7 @@ export function Home() {
           <Sprout className="h-12 w-12 text-primary" />
         </div>
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-          Smart Crop Predictor
+          Predict-O-Crop
         </h1>
         <p className="max-w-[700px] text-lg text-muted-foreground">
           Make informed decisions about your crops with our advanced soil analysis tools.

@@ -33,7 +33,7 @@ export function SoilSamplingForm() {
     soilTexture: "",
     phLevel: "",
     organicMatter: "",
-    moistureContent: 50,
+    humidity: 50,
     temperature: "",
     rainfall: "",
     nitrogen: "",
@@ -173,7 +173,7 @@ export function SoilSamplingForm() {
               <Card className="p-6">
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="phLevel">pH Level (0-14)</Label>
+                    <Label htmlFor="phLevel">pH Level (4-9)</Label>
                     <Input
                       id="phLevel"
                       name="phLevel"
@@ -186,29 +186,15 @@ export function SoilSamplingForm() {
                       required
                     />
                   </div>
+                  
                   <div>
-                    <Label htmlFor="organicMatter">
-                      Organic Matter Content (%)
-                    </Label>
-                    <Input
-                      id="organicMatter"
-                      name="organicMatter"
-                      type="number"
-                      min="0"
-                      max="100"
-                      value={formData.organicMatter}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label>Moisture Content (%)</Label>
+                    <Label>Humidity (%)</Label>
                     <div className="pt-2">
                       <Slider
-                        value={[Number(formData.moistureContent)]}
+                        value={[Number(formData.humidity)]}
                         onValueChange={(value) =>
                           handleInputChange({
-                            target: { name: "moistureContent", value: value[0].toString() },
+                            target: { name: "humidity", value: value[0].toString() },
                           })
                         }
                         max={100}
@@ -216,7 +202,7 @@ export function SoilSamplingForm() {
                       />
                     </div>
                     <div className="text-right text-sm text-muted-foreground">
-                      {formData.moistureContent}%
+                      {formData.humidity}%
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -242,7 +228,7 @@ export function SoilSamplingForm() {
             <TabsContent value="nutrients">
               <Card className="p-6">
                 <div className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4">
                     <div>
                       <Label htmlFor="nitrogen">Nitrogen (ppm)</Label>
                       <Input
@@ -266,7 +252,7 @@ export function SoilSamplingForm() {
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4">
                     <div>
                       <Label htmlFor="potassium">Potassium (ppm)</Label>
                       <Input
@@ -278,19 +264,7 @@ export function SoilSamplingForm() {
                         required
                       />
                     </div>
-                    <div>
-                      <Label htmlFor="salinity">
-                        Salinity (dS/m)
-                      </Label>
-                      <Input
-                        id="salinity"
-                        name="salinity"
-                        type="number"
-                        value={formData.salinity}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
+                    
                   </div>
                   <div className="flex gap-4">
                     <Button

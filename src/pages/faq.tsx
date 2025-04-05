@@ -13,7 +13,7 @@ export function FAQ() {
     {
       question: "What is soil sampling and why is it important?",
       answer:
-        "Soil sampling is the process of collecting soil specimens for analysis of their chemical, physical, and biological properties. It's crucial for understanding soil health, nutrient levels, and making informed decisions about crop management and fertilization.",
+        "Soil sampling is the process of systematically collecting soil samples from different locations and depths within a specific area to assess its physical, chemical, and biological properties, such as nutrient levels, pH, texture, and organic matter content, in order to inform agricultural practices, land management, or environmental studies.",
     },
     {
       question: "How often should I conduct soil sampling?",
@@ -23,7 +23,7 @@ export function FAQ() {
     {
       question: "What's the best time to collect soil samples?",
       answer:
-        "The best time for soil sampling is typically in the fall after harvest or in early spring before planting. Avoid sampling when the soil is too wet or immediately after applying fertilizers or amendments.",
+        "The best time to collect soil samples is typically during the fall or early spring when the soil is not overly wet or frozen. Fall sampling allows for nutrient adjustments before planting, while early spring sampling helps to plan for the upcoming growing season. Avoid sampling when the soil is excessively wet, dry, or frozen, as these conditions can lead to inaccurate results.",
     },
     {
       question: "How deep should I sample the soil?",
@@ -88,7 +88,7 @@ export function FAQ() {
         <div className="space-y-6">
           <Card className="p-6">
             <h2 className="font-semibold mb-4">Browse by Category</h2>
-            <div className="space-y-2">
+            <div className="space-y-2 text-slate-900">
               {categories.map((category) => (
                 <Button
                   key={category}

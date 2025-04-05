@@ -33,19 +33,19 @@ export function Contact() {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      value: "support@soilsampling.com",
+      value: "fategray2004@gmail.com",
       link: "mailto:support@soilsampling.com",
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "6386297791",
+      link: "tel:+916386297791",
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Address",
-      value: "123 Agriculture Street, Farmland, FL 12345",
+      value: "132 himadri boys hostel",
       link: "https://maps.google.com",
     },
   ];
@@ -133,23 +133,7 @@ export function Contact() {
             </div>
           </div>
 
-          <Card className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Office Hours</h2>
-            <div className="space-y-2">
-              <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span>9:00 AM - 6:00 PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>10:00 AM - 4:00 PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Sunday</span>
-                <span>Closed</span>
-              </div>
-            </div>
-          </Card>
+          
         </div>
       </div>
     </div>
