@@ -18,10 +18,6 @@ import {
   TabsList,
   TabsTrigger,
 } from "../components/ui/tabs";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "../components/ui/radio-group";
 import { toast } from "sonner";
 
 export function SoilSamplingForm() {
@@ -30,7 +26,6 @@ export function SoilSamplingForm() {
   const [formData, setFormData] = useState({
     location: "",
     region: "",
-    soilTexture: "",
     phLevel: "",
     organicMatter: "",
     humidity: 50,
@@ -62,18 +57,17 @@ export function SoilSamplingForm() {
     "India - Central",
     "India - South",
     "India - West",
-];
+  ];
 
   return (
-    <div className="container py-12  flex justify-around">
+    <div className="container py-12 flex justify-around">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-6">Soil Sampling Form</h1>
         
         <form onSubmit={handleSubmit}>
           <Tabs value={currentStep} className="space-y-6">
-            <TabsList className="grid w-full grid-cols-4 gap-2">
+            <TabsList className="grid w-full grid-cols-3 gap-2">
               <TabsTrigger value="location">Location</TabsTrigger>
-              <TabsTrigger value="texture">Texture</TabsTrigger>
               <TabsTrigger value="composition">Composition</TabsTrigger>
               <TabsTrigger value="nutrients">Nutrients</TabsTrigger>
             </TabsList>
@@ -115,56 +109,11 @@ export function SoilSamplingForm() {
                   </div>
                   <Button
                     type="button"
-                    onClick={() => setCurrentStep("texture")}
+                    onClick={() => setCurrentStep("composition")}
                     className="w-full"
                   >
                     Next Step
                   </Button>
-                </div>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="texture">
-              <Card className="p-6">
-                <div className="space-y-4">
-                  <div>
-                    <Label>Soil Texture</Label>
-                    <RadioGroup
-                      name="soilTexture"
-                      value={formData.soilTexture}
-                      onValueChange={(value) =>
-                        handleInputChange({ target: { name: "soilTexture", value } })
-                      }
-                    >
-                      <div className="grid gap-2">
-                        {["Clay", "Silt", "Sand", "Loam"].map((texture) => (
-                          <div
-                            key={texture}
-                            className="flex items-center space-x-2"
-                          >
-                            <RadioGroupItem value={texture.toLowerCase()} id={texture} />
-                            <Label htmlFor={texture}>{texture}</Label>
-                          </div>
-                        ))}
-                      </div>
-                    </RadioGroup>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() => setCurrentStep("location")}
-                    >
-                      Previous
-                    </Button>
-                    <Button
-                      type="button"
-                      onClick={() => setCurrentStep("composition")}
-                      className="flex-1"
-                    >
-                      Next Step
-                    </Button>
-                  </div>
                 </div>
               </Card>
             </TabsContent>
@@ -209,7 +158,7 @@ export function SoilSamplingForm() {
                     <Button
                       type="button"
                       variant="outline"
-                      onClick={() => setCurrentStep("texture")}
+                      onClick={() => setCurrentStep("location")}
                     >
                       Previous
                     </Button>
